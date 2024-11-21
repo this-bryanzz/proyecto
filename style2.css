@@ -1,0 +1,302 @@
+/* Reset básico para eliminar márgenes y rellenos por defecto */
+body, html {
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 0; /* Elimina el relleno por defecto */
+    width: 100%; /* Establece el ancho al 100% */
+}
+
+/* Estilos para el menú principal en la parte superior */
+.menu-principal-arriba {
+    display: flex; /* Usa flexbox para alinear elementos */
+    justify-content: space-between; /* Espacia los elementos de forma equitativa */
+    align-items: center; /* Centra verticalmente los elementos */
+    background-color: black; /* Color de fondo negro */
+    width: 100%; /* Ancho completo */
+    padding: 10px 20px; /* Espaciado horizontal y vertical */
+}
+
+/* Estilos para el carrito */
+.carrito {
+    max-height: 40px; /* Altura máxima del carrito */
+    object-fit: contain; /* Mantiene la proporción de la imagen */
+    margin-left: auto; /* Empuja hacia la derecha */
+}
+
+.carrito-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espacio entre los logos */
+}
+
+.carrito, .cuenta {
+    max-height: 40px;
+    object-fit: contain;
+    margin: 0;
+}
+/* Logo en la parte superior izquierda */
+.imagen-logo {
+    max-height: 50px; /* Altura máxima para el logo */
+    margin-left: 20px; /* Margen a la izquierda del logo */
+}
+
+/* Estilos para los enlaces del menú superior */
+.menu-links {
+    display: flex; /* Usa flexbox para alinear los enlaces */
+}
+
+.menu-principal-arriba a {
+    color: white; /* Color del texto en blanco */
+    text-decoration: none; /* Sin subrayado */
+    padding: 10px 15px; /* Espaciado interno */
+    display: block; /* Hace que el enlace ocupe todo el espacio */
+}
+
+.menu-principal-arriba a:hover {
+    background-color: grey; /* Color de fondo al pasar el mouse */
+    color: black; /* Cambia el color del texto al pasar el mouse */
+}
+
+/* Estilos para el menú principal */
+.menu-principal {
+    display: flex; /* Usa flexbox para alinear elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    background-color: white; /* Color de fondo blanco */
+    padding: 10px 20px; /* Espaciado interno */
+    border-bottom: 1px solid #e0e0e0; /* Línea inferior */
+    position: sticky; /* Fija el menú en la parte superior al hacer scroll */
+    top: 0; /* Posición fija en la parte superior */
+    width: 100%; /* Ancho completo */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total */
+    height: 60px; /* Altura fija para el header */
+}
+
+/* Contenedor para los enlaces del menú */
+.menu-categorias {
+    display: flex; /* Usa flexbox para alinear los enlaces */
+    flex-grow: 1; /* Permite que el contenedor ocupe el espacio disponible */
+    justify-content: center; /* Centra los enlaces horizontalmente */
+    position: relative; /* Posición relativa para el contenedor */
+}
+
+/* Estilos para los enlaces del menú principal */
+.menu-principal a {
+    color: black; /* Color del texto en negro */
+    text-decoration: none; /* Sin subrayado */
+    padding: 0 15px; /* Espaciado horizontal entre enlaces */
+    font-weight: bold; /* Texto en negrita */
+}
+
+.menu-principal a:hover {
+    color: #ff4500; /* Cambia el color al pasar el mouse */
+}
+
+/* Contenedor para los iconos a la derecha */
+.menu-iconos {
+    display: flex; /* Usa flexbox para alinear los iconos */
+    align-items: center; /* Centra verticalmente los iconos */
+    position: absolute; /* Posiciona de forma absoluta */
+    right: 20px; /* Distancia del borde derecho */
+    height: 100%; /* Ocupa toda la altura del header */
+}
+
+.imagen-buscador, .imagen-carrito {
+    max-height: 24px; /* Altura máxima para los iconos */
+    width: auto; /* Mantiene la proporción de la imagen */
+    margin-left: 15px; /* Margen a la izquierda de los iconos */
+    object-fit: contain; /* Ajusta la imagen manteniendo la proporción */
+}
+
+/* Estilos para el contenedor de productos */
+.contenedor-productos {
+    display: grid; /* Usa grid para organizar los productos */
+    grid-template-columns: repeat(4, 1fr); /* Cuatro columnas de igual tamaño */
+    gap: 20px; /* Espacio entre los productos */
+    padding: 20px; /* Espaciado interno */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+
+/* Estilos para cada producto */
+.contenedor-productos > div {
+    border: 1px solid #e0e0e0; /* Borde gris claro */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 15px; /* Espaciado interno */
+    text-align: center; /* Centra el texto */
+    background-color: #fff; /* Color de fondo blanco */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil */
+    transition: transform 0.3s ease; /* Transición suave para el hover */
+}
+
+.contenedor-productos > div:hover {
+    transform: translateY(-5px); /* Eleva el producto al pasar el mouse */
+}
+
+.contenedor-productos img {
+    max-width: 100%; /* Ancho máximo de la imagen */
+    height: auto; /* Altura automática para mantener proporción */
+    margin-bottom: 10px; /* Margen inferior */
+}
+
+.contenedor-productos p {
+    margin: 0; /* Elimina el margen por defecto */
+    font-size: 14px; /* Tamaño de fuente */
+    color: #333; /* Color del texto */
+}
+
+/* Estilos responsivos */
+@media (max-width: 1024px) {
+    .contenedor-productos {
+        grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 768px) {
+    .contenedor-productos {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedor-productos {
+        grid-template-columns: 1fr; /* Una columna en pantallas muy pequeñas */
+    }
+}
+
+.btn-blanco {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.btn-blanco:hover {
+    background-color: #f1f1f1;
+}
+
+.btn-negro {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.btn-negro:hover {
+    background-color: #333;
+}
+
+.contenedor-centrado {
+    display: flex; /* Flexbox para alineación */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Altura del 100% del viewport */
+    background-color: #f9f9f9; /* Color de fondo opcional */
+}
+
+.cuenta {
+    max-height: 40px; /* Mismo tamaño que el logo del carrito */
+    object-fit: contain; /* Mantiene la proporción de la imagen */
+    margin-left: 15px; /* Añadir margen para espaciarlo un poco */
+}
+
+#carrito {
+    background-color: white; /* Fondo blanco para el carrito */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+    text-align: center; /* Centra el contenido del texto */
+}
+#lista-carrito {
+    list-style-type: none;
+    padding: 0;
+}
+
+.producto-carrito {
+    margin: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.producto-carrito img {
+    width: 100px;
+    height: auto;
+}
+
+.cantidad-controles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.boton-eliminar, .boton-cantidad {
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.boton-cantidad {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 18px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton-eliminar:hover {
+    background-color: #cc0000;
+}
+
+.boton-compra, .boton-vaciar {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 16px;
+}
+
+.boton-vaciar {
+    background-color: red;
+}
+
+.boton-vaciar:hover {
+    background-color: darkred;
+}
+
+.boton-compra:hover {
+    background-color: darkgreen;
+}
+
+#total {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+
+/* Estilo para el pie de página */
+footer {
+    background-color: black; /* Color de fondo negro */
+    color: white; /* Color del texto en blanco */
+    text-align: center; /* Centra el texto */
+    padding: 10px 0; /* Espaciado vertical */
+    margin-top: 50px; /* Margen superior */
+}

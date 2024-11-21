@@ -1,0 +1,73 @@
+/* Reset básico */ 
+body, html { 
+    margin: 0; 
+    padding: 0; 
+    width: 100%; 
+    font-family: Arial, sans-serif; 
+}
+
+/* Estilos para el menú principal */ 
+.menu-principal-arriba { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: black; 
+    width: 100%; 
+    padding: 10px 20px; 
+}
+
+.menu-principal-arriba .menu-links {
+    display: flex; /* Mantiene los links en línea */
+}
+
+.menu-principal-arriba a { 
+    color: white; 
+    text-decoration: none; 
+    padding: 10px 15px; 
+    display: block; 
+}
+
+.menu-principal-arriba a:hover { 
+    background-color: grey; 
+    color: black; 
+}
+
+/* Estilos para los detalles del producto */ 
+.producto-detalles { 
+    text-align: center; 
+    margin: 20px; 
+    min-height: calc(100vh - 200px); 
+}
+
+.producto-imagen { 
+    width: 200px; 
+    height: auto; 
+    margin-bottom: 20px; 
+}
+
+.botones { 
+    margin-top: 20px; 
+}
+
+.boton { 
+    padding: 10px 20px; 
+    margin: 5px; 
+    background-color: #000000; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+
+.boton:hover { 
+    background-color: #333; 
+}
+
+/* Estilo para el pie de página */ 
+footer { 
+    background-color: black; 
+    color: white; 
+    text-align: center; 
+    padding: 10px 0; 
+    width: 100%; 
+}

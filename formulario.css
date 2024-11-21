@@ -1,0 +1,124 @@
+/* Estilos generales para el body y html */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%; /* Aseguramos que la altura sea 100% para ocupar toda la ventana */
+}
+
+/* Estilos para el contenido principal */
+body {
+    display: flex;
+    flex-direction: column; /* Esto permite que el contenido crezca hacia abajo */
+    min-height: 100%; /* Asegura que la página ocupe todo el alto disponible */
+}
+
+/* Estilos para el contenedor del formulario */
+.form-container {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Estilo para el encabezado dentro del contenedor del formulario */
+.form-container h2 {
+    text-align: center;
+}
+
+/* Estilo para el formulario dentro del contenedor del formulario */
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo para las etiquetas dentro del formulario */
+.form-container label {
+    margin-top: 10px;
+}
+
+/* Estilo para los campos de entrada dentro del formulario */
+.form-container input {
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+/* Estilo para el botón dentro del formulario */
+.form-container button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* Estilo para el botón cuando el ratón pasa sobre él */
+.form-container button:hover {
+    background-color: #333;
+}
+
+/* Estilo para el texto de párrafo dentro del contenedor del formulario */
+.form-container p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Estilo para los enlaces dentro del contenedor del formulario */
+.form-container a {
+    color: #ff4500;
+    text-decoration: none;
+}
+
+/* Estilo para los enlaces cuando el ratón pasa sobre ellos */
+.form-container a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos generales para el menú de navegación */
+.menu-principal {
+    overflow: hidden;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    background-color: white;
+}
+
+/* Estilo para los enlaces dentro del menú de navegación */
+.menu-principal a {
+    text-align: center;
+    float: left;
+    display: block;
+    color: white;
+    text-decoration: none;
+    width: 50%;
+    background-color: black;
+    padding: 2% 0%;
+    margin: 0;
+    border: 0;
+    font-weight: bold;
+}
+
+/* Estilo para los enlaces del menú cuando el ratón pasa sobre ellos */
+.menu-principal a:hover {
+    background-color: rgb(121, 121, 121);
+    color: black;
+}
+
+/* Estilo para el pie de página */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;  /* Esto empuja el footer hacia abajo */
+    width: 100%;
+}

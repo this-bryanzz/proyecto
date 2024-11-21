@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="formulario.css">
+    <script src="form.js"></script>
+</head>
+<body>
+    <!-- Encabezado de la página que contiene el menú de navegación -->
+    <header>
+        <div class="menu-principal">
+            <!-- Enlaces de navegación para ir a otras páginas -->
+            <a href="registro.html">Registro</a>
+            <a href="ingreso.html">Ingreso</a>
+        </div>
+    </header>
+    
+    <!-- Contenedor principal del formulario de registro -->
+    <div class="form-container">
+        <h2>Registro</h2> <!-- Título del formulario que indica que es para el registro de nuevos usuarios -->
+        
+        <form action="form.js2" method="post" id="registroForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="correo">Correo:</label>
+            <input type="email" id="correo" name="email" required>
+            
+            <label for="contraseña">Contraseña:</label>
+            <input type="password" id="contraseña" name="password" required>
+            
+            <button type="submit">Registrarse</button>
+        </form>
+        <!-- Enlace para redirigir a los usuarios a la página de ingreso si ya tienen cuenta -->
+        <p>¿Ya tienes cuenta? <a href="ingreso.html">Inicia sesión aquí</a></p>
+    </div>
+    
+    <!-- Pie de página con información de derechos reservados -->
+    <footer>
+        <div class="pie">
+            <p>&copy; Todos los derechos reservados</p>
+        </div>
+    </footer>
+</body>
+</html>

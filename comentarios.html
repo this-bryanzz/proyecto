@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sugerencias, Quejas y Reclamos</title>
+    <link rel="stylesheet" href="comentarios.css">
+</head>
+<body>
+    <!-- Encabezado de la página con el logo y el menú de navegación principal -->
+    <header class="menu-principal-arriba">
+        <nav class="menu-links"> <!-- Menú de navegación con enlaces a otras secciones -->
+            <a href="inicio.html">Inicio</a>
+            <a href="">Productos</a>
+            <a href="">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- Contenido principal de la página, que incluye el formulario de comentarios -->
+    <main class="contenedor-formulario">
+        <h1>Comentarios</h1> <!-- Título de la sección de comentarios -->
+        <form class="formulario-sugerencias"> <!-- Formulario para enviar sugerencias, quejas o reclamos -->
+            <!-- Campos para que el usuario ingrese su información y mensaje -->
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="tipo">Tipo de mensaje:</label>
+            <select id="tipo" name="tipo" required>
+                <option value="">Seleccione una opción</option>
+                <option value="sugerencia">Sugerencia</option>
+                <option value="queja">Queja</option>
+                <option value="reclamo">Reclamo</option>
+            </select>
+            
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+            
+            <button type="submit">Enviar</button> <!-- Botón para enviar el formulario -->
+        </form>
+    </main>
+
+    <!-- Pie de página con información de derechos reservados -->
+    <footer>
+        <p>&copy; 2024 Tu Empresa. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

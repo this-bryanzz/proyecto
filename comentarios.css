@@ -1,0 +1,167 @@
+/* Estilos generales para el body y html */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%; /* Aseguramos que la altura sea 100% para ocupar toda la ventana */
+}
+
+/* Estilos para el contenido principal */
+body {
+    display: flex;
+    flex-direction: column; /* Esto permite que el contenido crezca hacia abajo */
+}
+
+/* Estilos para el encabezado superior del menú principal */
+.menu-principal-arriba {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    width: 100%;
+    padding: 10px 0;
+}
+
+/* Estilos para la imagen del logo en el encabezado */
+.imagen-logo {
+    max-height: 50px;
+    margin-left: 20px;
+}
+
+/* Estilos para el contenedor del menú de enlaces dentro del encabezado */
+.menu-links {
+    display: flex;
+}
+
+/* Estilos para los enlaces en el encabezado principal */
+.menu-principal-arriba a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+/* Estilos para los enlaces en el encabezado cuando el ratón pasa sobre ellos */
+.menu-principal-arriba a:hover {
+    background-color: beige;
+    color: dimgray;
+}
+
+/* Estilos para el menú principal que se usa como barra de navegación fija */
+.menu-principal {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+    height: 60px;
+}
+
+/* Estilos para la imagen del logo en el menú principal */
+.menu-principal > .imagen-logo-nike {
+    position: absolute;
+    left: 20px;
+    max-height: 30px;
+}
+
+/* Estilos para el contenedor de las categorías en el menú principal */
+.menu-categorias {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    position: relative;
+}
+
+/* Estilos para los enlaces en el menú principal */
+.menu-principal a {
+    color: black;
+    text-decoration: none;
+    padding: 0 15px;
+    font-weight: bold;
+}
+
+/* Estilos para los enlaces del menú principal cuando el ratón pasa sobre ellos */
+.menu-principal a:hover {
+    color: #ff4500;
+}
+
+/* Estilos para los iconos en el menú principal */
+.menu-iconos {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 20px;
+    height: 100%;
+}
+
+/* Estilos para las imágenes de los iconos en el menú principal */
+.imagen-buscador, .imagen-carrito {
+    max-height: 24px;
+    width: auto;
+    margin-left: 15px;
+    object-fit: contain;
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;  /* Esto empuja el footer hacia abajo */
+    width: 100%;
+}
+
+/* Estilos para el formulario de comentarios */
+.contenedor-formulario {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Estilos para el formulario dentro del contenedor */
+.formulario-sugerencias {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos para las etiquetas dentro del formulario */
+.formulario-sugerencias label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Estilos para los campos de entrada y selección dentro del formulario */
+.formulario-sugerencias input,
+.formulario-sugerencias textarea,
+.formulario-sugerencias select {
+    margin-top: 5px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Estilos para el botón de envío dentro del formulario */
+.formulario-sugerencias button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Estilos para el botón de envío cuando el ratón pasa sobre él */
+.formulario-sugerencias button:hover {
+    background-color: #e63900;
+}

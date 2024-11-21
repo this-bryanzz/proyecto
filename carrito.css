@@ -1,0 +1,290 @@
+/* Reset básico para eliminar márgenes y rellenos por defecto */
+body, html {
+  margin: 0; 
+  padding: 0;
+  width: 100%; 
+}
+
+/* Estilos para el menú principal en la parte superior */
+.menu-principal-arriba {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  width: 100%;
+  padding: 10px 20px;
+}
+
+.carrito {
+  max-height: 40px; 
+  object-fit: contain;
+  margin-left: auto;
+}
+
+.carrito, .cuenta {
+  max-height: 40px;
+  object-fit: contain;
+  margin: 0;
+}
+
+.imagen-logo {
+  max-height: 50px;
+  margin-left: 20px;
+}
+
+.menu-links {
+  display: flex;
+}
+
+.menu-principal-arriba a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+}
+
+.menu-principal-arriba a:hover {
+  background-color: grey;
+  color: black;
+}
+
+/* Estilos para el menú principal */
+.menu-principal {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 10px 20px;
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-sizing: border-box;
+  height: 60px;
+}
+
+.menu-categorias {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  position: relative;
+}
+
+.menu-principal a {
+  color: black;
+  text-decoration: none;
+  padding: 0 15px;
+  font-weight: bold;
+}
+
+.menu-principal a:hover {
+  color: #ff4500;
+}
+
+.menu-iconos {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 20px;
+  height: 100%;
+}
+
+.imagen-buscador, .imagen-carrito {
+  max-height: 24px;
+  width: auto;
+  margin-left: 15px;
+  object-fit: contain;
+}
+
+/* Estilos para el contenedor de productos */
+.contenedor-productos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contenedor-productos > div {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.contenedor-productos > div:hover {
+  transform: translateY(-5px);
+}
+
+.contenedor-productos img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.contenedor-productos p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Estilos responsivos */
+@media (max-width: 1024px) {
+  .contenedor-productos {
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .contenedor-productos {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .contenedor-productos {
+      grid-template-columns: 1fr;
+  }
+}
+
+.btn-blanco {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.btn-blanco:hover {
+  background-color: #f1f1f1;
+}
+
+.btn-negro {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.btn-negro:hover {
+  background-color: #333;
+}
+
+.contenedor-centrado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.cuenta {
+  max-height: 40px;
+  object-fit: contain;
+  margin-left: 15px;
+}
+
+#carrito {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#lista-carrito {
+  list-style-type: none;
+  padding: 0;
+}
+
+.producto-carrito {
+  margin: 10px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.producto-carrito img {
+  width: 100px;
+  height: auto;
+}
+
+.cantidad-controles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.boton-eliminar, .boton-cantidad {
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.boton-cantidad {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 18px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boton-eliminar:hover {
+  background-color: #cc0000;
+}
+
+.boton-compra, .boton-vaciar {
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+  font-size: 16px;
+}
+
+.boton-vaciar {
+  background-color: red;
+}
+
+.boton-vaciar:hover {
+  background-color: darkred;
+}
+
+.boton-compra:hover {
+  background-color: darkgreen;
+}
+
+#total {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Estilo para el pie de página */
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 50px;
+}

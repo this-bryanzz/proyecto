@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito de Compras</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="carrito.js"></script>
+    <link rel="stylesheet" href="carrito.css">
+    <script type="text/javascript" src="https://api.taxamo.com/js/v1/taxamo.all.js"></script>
+
+  </head>
+  <body>
+    <header>
+      <div class="menu-principal-arriba">
+        <div class="menu-links">
+          <a href="registro.html">Registrarse</a>
+          <a href="inicio.html">Buscar en tienda</a>
+          <a href="#">Eventos</a>
+          <a href="comentarios.html">Comentarios</a>
+        </div>
+      </div>
+    </header>
+    <div class="contenedor-centrado">
+        <div id="carrito">
+          <h1>Carrito de Compras</h1>
+          <ul id="lista-carrito">
+            <li class="producto-carrito">
+              <img src="https://via.placeholder.com/100" alt="Producto 1" />
+              <div>
+                <p>Producto 1 - 50€</p>
+                <div class="cantidad-controles">
+                  <button class="boton-cantidad">-</button>
+                  <span>1</span>
+                  <button class="boton-cantidad">+</button>
+                </div>
+              </div>
+              <button class="boton-eliminar">Eliminar</button>
+            </li>
+          </ul>
+          <p id="total">Total: 50€</p>
+          <div>
+            <button id="vaciar-carrito" class="boton-vaciar">Vaciar Carrito</button>
+            <button id="proceder-compra" class="boton-compra">
+              Proceder con la compra
+            </button>
+          </div>
+        </div>
+      </div>
+  </body>
+</html>
